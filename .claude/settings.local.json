@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find \"c:\\\\\\\\Users\\\\\\\\PC-01\\\\\\\\Documents\\\\\\\\Auto Peças\" -type f -o -type d)",
+      "Bash(ls -laR \"c:\\\\\\\\Users\\\\\\\\PC-01\\\\\\\\Documents\\\\\\\\Auto Peças\")",
+      "Bash(find \"c:\\\\\\\\Users\\\\\\\\PC-01\\\\\\\\Documents\\\\\\\\Auto Peças\" -name \"package.json\" -o -name \"tsconfig.json\" -o -name \"tailwind.config.*\" -o -name \"App.tsx\" -o -name \"main.tsx\" -o -name \"index.tsx\")",
+      "Bash(ls -la \"c:\\\\\\\\Users\\\\\\\\PC-01\\\\\\\\Documents\" 2>&1 | head -30)",
+      "Read(//c/Users/PC-01/Documents/**)",
+      "Bash(find \"c:\\\\\\\\Users\\\\\\\\PC-01\\\\\\\\Documents\\\\\\\\React\" -name \"*.tsx\" -o -name \"*.ts\" -o -name \"package.json\")",
+      "Bash(ls -la \"c:\\\\\\\\Users\\\\\\\\PC-01\\\\\\\\Documents\\\\\\\\React\")",
+      "Bash(ls -la \"c:\\\\\\\\Users\\\\\\\\PC-01\\\\\\\\Documents\\\\\\\\React\\\\\\\\classroom\")",
+      "Bash(find \"c:\\\\\\\\Users\\\\\\\\PC-01\\\\\\\\Documents\\\\\\\\React\\\\\\\\classroom\\\\\\\\src\" -type f)",
+      "Bash(find \"c:\\\\\\\\Users\\\\\\\\PC-01\\\\\\\\Documents\\\\\\\\React\\\\\\\\classroom\" -name \"tailwind.config.*\" -o -name \"*.css\" -o -name \"globals.css\" -o -name \"index.css\")",
+      "Bash(find \"c:\\\\\\\\Users\\\\\\\\PC-01\\\\\\\\Documents\\\\\\\\React\\\\\\\\classroom\" -name \"*[Cc]alculator*\")",
+      "Bash(find \"c:\\\\\\\\Users\\\\\\\\PC-01\\\\\\\\Documents\\\\\\\\React\\\\\\\\classroom\\\\\\\\src\" -type f -o -type d)",
+      "Bash(ls -laR \"c:\\\\\\\\Users\\\\\\\\PC-01\\\\\\\\Documents\\\\\\\\React\\\\\\\\classroom\\\\\\\\public\")",
+      "Bash(find \"c:\\\\\\\\Users\\\\\\\\PC-01\\\\\\\\Documents\\\\\\\\Auto Peças\" -type f)",
+      "Bash(find \"C:/Users/PC-01\" -name \"AboutSection.tsx\" -o -name \"HeroSection.tsx\" -o -name \"BrandsCarousel.tsx\" 2>/dev/null)",
+      "Read(//c/Users/PC-01/**)",
+      "Bash(npm install *)",
+      "Bash(npm run *)"
+    ]
+  }
+}

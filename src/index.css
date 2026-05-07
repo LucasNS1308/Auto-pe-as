@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 213 45% 7%;
+    --foreground: 45 15% 93%;
+
+    --card: 213 40% 10%;
+    --card-foreground: 45 15% 93%;
+
+    --popover: 213 40% 10%;
+    --popover-foreground: 45 15% 93%;
+
+    --primary: 25 95% 53%;
+    --primary-foreground: 213 45% 7%;
+
+    --secondary: 213 35% 15%;
+    --secondary-foreground: 45 15% 93%;
+
+    --muted: 213 30% 13%;
+    --muted-foreground: 213 15% 50%;
+
+    --accent: 213 52% 25%;
+    --accent-foreground: 45 15% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 213 25% 16%;
+    --input: 213 25% 16%;
+    --ring: 25 95% 53%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* ─── Blog post content ───────────────────────────────────────────────────── */
+.blog-content {
+  line-height: 1.85;
+  color: hsl(var(--foreground));
+}
+.blog-content p { margin-bottom: 1.1rem; }
+.blog-content h1 { font-size: 2rem; margin: 2rem 0 1rem; color: hsl(var(--foreground)); }
+.blog-content h2 { font-size: 1.6rem; margin: 1.75rem 0 0.75rem; color: hsl(var(--foreground)); }
+.blog-content h3 { font-size: 1.3rem; margin: 1.5rem 0 0.6rem; color: hsl(var(--foreground)); }
+.blog-content ul { list-style: disc; padding-left: 1.75rem; margin-bottom: 1rem; }
+.blog-content ol { list-style: decimal; padding-left: 1.75rem; margin-bottom: 1rem; }
+.blog-content li { margin-bottom: 0.4rem; }
+.blog-content strong { font-weight: 700; }
+.blog-content em { font-style: italic; }
+.blog-content u { text-decoration: underline; }
+.blog-content img {
+  max-width: 100%;
+  border-radius: 0.75rem;
+  margin: 1.75rem auto;
+  display: block;
+}
+
+@layer utilities {
+  .text-gradient-amber {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(25 95% 57%), hsl(20 90% 47%));
+  }
+
+  .bg-gradient-amber {
+    background-image: linear-gradient(135deg, hsl(25 95% 53%), hsl(20 90% 43%));
+  }
+
+  .bg-gradient-card {
+    background-image: linear-gradient(145deg, hsl(213 40% 12%), hsl(213 40% 8%));
+  }
+
+  .shadow-amber-glow {
+    box-shadow: 0 0 60px -15px hsl(25 95% 53% / 0.4);
+  }
+
+  .text-gradient-red {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(0 75% 55%), hsl(355 80% 45%));
+  }
+}
