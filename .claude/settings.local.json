@@ -18,7 +18,13 @@
       "Bash(find \"C:/Users/PC-01\" -name \"AboutSection.tsx\" -o -name \"HeroSection.tsx\" -o -name \"BrandsCarousel.tsx\" 2>/dev/null)",
       "Read(//c/Users/PC-01/**)",
       "Bash(npm install *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(npx tsc *)",
+      "Bash(Get-ChildItem \"c:\\\\Users\\\\PC-01\\\\Documents\\\\Auto Peças\\\\src\\\\assets\")",
+      "Bash(Select-Object Name, Length, LastWriteTime)",
+      "Bash(Sort-Object LastWriteTime -Descending)",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\PC-01\\\\Documents\\\\Auto Peças\\\\src\\\\assets\" | ForEach-Object { \"$\\($_.Name\\) | $\\($_.Length\\) bytes | $\\($_.LastWriteTime\\)\" })",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\PC-01\\\\Documents\\\\Auto Peças\\\\src\\\\assets\" -Recurse | ForEach-Object { \"$\\($_.FullName\\) | $\\($_.Length\\) bytes\" })"
     ]
   }
 }

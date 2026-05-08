@@ -1,40 +1,24 @@
-import { MapPin, Mail, Instagram, Youtube, Facebook, Linkedin, PhoneCall, Settings } from 'lucide-react';
+import { MapPin, Mail, Instagram, Youtube, Facebook, Linkedin, PhoneCall } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+import logoRDF from '@/assets/logo-rdf.png';
 
 const addresses = [
   {
-    label: 'Matriz São Paulo',
-    text: 'Av. Paulista, 1000 - Bela Vista, São Paulo - SP',
-  },
-  {
-    label: 'Filial Minas Gerais',
-    text: 'R. dos Carijós, 200 - Centro, Belo Horizonte - MG',
-  },
-  {
-    label: 'Filial Paraná',
-    text: 'Av. Sete de Setembro, 500 - Centro, Curitiba - PR',
+    label: 'Matriz',
+    text: 'São Paulo - SP, Brasil',
   },
 ];
 
 const phones = [
-  { number: '5511930000001', label: '(11) 3000-0001 — Matriz São Paulo' },
-  { number: '5531930000002', label: '(31) 3000-0002 — Filial Belo Horizonte' },
-  { number: '5541930000003', label: '(41) 3000-0003 — Filial Curitiba' },
+  { number: '5511930000001', label: '(11) 3000-0001' },
 ];
 
 const socials: { href: string; Icon: LucideIcon; label: string }[] = [
-  { href: '#', Icon: Instagram, label: 'Instagram' },
+  { href: 'https://instagram.com/rdfimportadora', Icon: Instagram, label: 'Instagram' },
   { href: '#', Icon: Youtube, label: 'YouTube' },
   { href: '#', Icon: Facebook, label: 'Facebook' },
   { href: '#', Icon: Linkedin, label: 'LinkedIn' },
 ];
-
-const Logo = () => (
-  <div className="flex items-center gap-2">
-    <Settings className="h-6 w-6 text-primary" />
-    <span className="font-semibold text-foreground">AutoPeças Brasil</span>
-  </div>
-);
 
 const FooterSimple = () => {
   return (
@@ -42,10 +26,10 @@ const FooterSimple = () => {
       <div className="container py-14">
         <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4 flex flex-col gap-5">
-            <Logo />
+            <img src={logoRDF} alt="RDF Importadora" className="h-12 w-auto" />
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Distribuidor Autorizado das Maiores Marcas do Setor Automotivo. Compromisso com a
-              qualidade e a excelência no atendimento.
+              A melhor e mais completa importadora e distribuidora de peças automotivas.
+              Atendendo oficinas e revendas com qualidade e agilidade em todo o Brasil.
             </p>
             <div>
               <h4 className="font-display text-base text-foreground mb-3">Nossas redes sociais</h4>
@@ -61,7 +45,7 @@ const FooterSimple = () => {
           </div>
 
           <div className="md:col-span-4">
-            <h4 className="font-display text-lg text-foreground mb-4">Nossos Endereços</h4>
+            <h4 className="font-display text-lg text-foreground mb-4">Nosso Endereço</h4>
             <div className="space-y-4">
               {addresses.map((addr) => (
                 <div key={addr.label} className="flex gap-3">
@@ -84,24 +68,18 @@ const FooterSimple = () => {
                   <span className="text-sm text-muted-foreground group-hover:text-primary transition-colors">{p.label}</span>
                 </a>
               ))}
-              <a href="mailto:contato@autopecasbrasil.com.br" className="flex items-center gap-3 group">
+              <a href="mailto:contato@rdfimportadora.com.br" className="flex items-center gap-3 group">
                 <Mail className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
                 <span className="text-sm text-muted-foreground group-hover:text-primary transition-colors">
-                  contato@autopecasbrasil.com.br
+                  contato@rdfimportadora.com.br
                 </span>
               </a>
-            </div>
-            <div className="mt-6">
-              <h4 className="font-display text-base text-foreground mb-2">Certificações</h4>
-              <div className="space-y-1 text-xs text-muted-foreground">
-                <p>Certificação ISO 9001</p>
-              </div>
             </div>
           </div>
         </div>
 
         <div className="border-t border-border mt-10 pt-6 text-center text-xs text-muted-foreground">
-          Todos os direitos reservados a AutoPeças Brasil ®
+          Todos os direitos reservados a RDF Importadora ®
         </div>
       </div>
     </footer>

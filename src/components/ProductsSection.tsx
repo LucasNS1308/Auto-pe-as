@@ -1,6 +1,14 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import imgFreios from '@/assets/categorias/freios.jpg';
+import imgSuspensao from '@/assets/categorias/suspensao.jpg';
+import imgMotor from '@/assets/categorias/motor.jpg';
+import imgEletrica from '@/assets/categorias/eletrica.jpg';
+import imgFunilaria from '@/assets/categorias/funilaria.jpg';
+import imgTransmissao from '@/assets/categorias/transmissao.jpg';
+import imgPneus from '@/assets/categorias/pneus.jpg';
+import imgAcessorios from '@/assets/categorias/acessorios.jpg';
 
 interface Product {
   name: string;
@@ -25,6 +33,17 @@ const categories = [
   { id: 'pneus', label: 'Pneus e Rodas' },
   { id: 'acessorios', label: 'Acessórios' },
 ];
+
+const categoryImages: Record<string, string> = {
+  freios: imgFreios,
+  suspensao: imgSuspensao,
+  motor: imgMotor,
+  eletrica: imgEletrica,
+  funilaria: imgFunilaria,
+  transmissao: imgTransmissao,
+  pneus: imgPneus,
+  acessorios: imgAcessorios,
+};
 
 const products: Record<string, Product[]> = {
   freios: [
@@ -152,7 +171,7 @@ const ProductsSection = () => {
     <section className="py-24 bg-background" id="produtos">
       <div className="container mb-10">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <h2 className="text-4xl md:text-6xl font-display text-gradient-amber mb-2">
+          <h2 className="text-4xl md:text-6xl font-display text-gradient-rdf mb-2">
             Nossos Produtos
           </h2>
           <p className="text-muted-foreground text-lg">
@@ -184,10 +203,14 @@ const ProductsSection = () => {
                 activeCategory === cat.id ? 'border-primary shadow-amber-glow' : 'border-border hover:border-primary/40'
               }`}
             >
-              {/* Placeholder gradient no lugar da imagem */}
               <div className="relative h-36 overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-blue-950 to-slate-900" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                <img
+                  src={categoryImages[cat.id]}
+                  alt={cat.label}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 {activeCategory === cat.id && <div className="absolute inset-0 bg-primary/20" />}
               </div>
               <div className="bg-card px-3 py-3">

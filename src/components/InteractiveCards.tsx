@@ -4,18 +4,18 @@ import { ShieldCheck, Zap, Wrench } from 'lucide-react';
 const cards = [
   {
     icon: ShieldCheck,
-    title: 'Peças com Garantia',
-    text: 'Trabalhamos apenas com fornecedores certificados. Cada peça entregue tem procedência garantida e suporte pós-venda.',
+    title: 'Peças Importadas com Garantia',
+    text: 'Trabalhamos com fabricantes homologados internacionalmente. Cada peça tem procedência garantida e suporte pós-venda.',
   },
   {
     icon: Zap,
-    title: 'Entrega Ágil',
-    text: 'Logística eficiente para que sua oficina nunca pare por falta de peça. Atendemos todo o Brasil com rapidez e segurança.',
+    title: 'Distribuição por Atacado',
+    text: 'Condições especiais para oficinas, revendas e frotas. Quanto mais você compra, mais você economiza.',
   },
   {
     icon: Wrench,
-    title: 'Suporte Especializado',
-    text: 'Nossa equipe técnica está pronta para ajudar na identificação da peça correta para cada modelo e aplicação.',
+    title: 'Suporte Técnico Especializado',
+    text: 'Nossa equipe identifica a peça exata para cada modelo e aplicação, evitando erros de compatibilidade.',
   },
 ];
 
@@ -31,7 +31,7 @@ const InteractiveCards = () => {
         >
           <h2 className="text-4xl md:text-6xl font-display text-foreground mb-3">
             Por que escolher a{' '}
-            <span className="text-gradient-amber">AutoPeças Brasil?</span>
+            <span className="text-gradient-rdf">RDF Importadora?</span>
           </h2>
         </motion.div>
 

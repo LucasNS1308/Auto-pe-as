@@ -5,7 +5,6 @@ import TechSection from '@/components/TechSection';
 import ProductsSection from '@/components/ProductsSection';
 import BrandsCarousel from '@/components/BrandsCarousel';
 import FlipCards from '@/components/FlipCards';
-import VideosSection from '@/components/VideosSection';
 import InteractiveCards from '@/components/InteractiveCards';
 import Footer from '@/components/Footer';
 import CTAButton from '@/components/CTAButton';
@@ -23,7 +22,6 @@ const Index = () => {
       <ProductsSection />
       <BrandsCarousel />
       <FlipCards />
-      <VideosSection />
       <InteractiveCards />
       <Footer />
     </div>

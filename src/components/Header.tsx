@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Home, Info, Package, Youtube, Phone, BookOpen, Tag, Menu, X, Settings } from 'lucide-react';
+import { Home, Info, Package, Phone, Tag, Menu, X } from 'lucide-react';
+import logoRDF from '@/assets/logo-rdf.png';
 
 const SCROLL_THRESHOLD_PX = 80;
 
@@ -9,16 +10,11 @@ const navLinks = [
   { href: '#sobre', Icon: Info, label: 'Sobre' },
   { href: '#produtos', Icon: Package, label: 'Produtos' },
   { href: '#marcas', Icon: Tag, label: 'Marcas' },
-  { href: '#videos', Icon: Youtube, label: 'Vídeos' },
-  { href: '/blog', Icon: BookOpen, label: 'Blog' },
   { href: '#contato', Icon: Phone, label: 'Contato' },
 ];
 
-const Logo = () => (
-  <div className="flex items-center gap-2">
-    <Settings className="h-6 w-6 text-primary" />
-    <span className="font-semibold text-foreground text-sm leading-tight">AutoPeças Brasil</span>
-  </div>
+const Logo = ({ className }: { className?: string }) => (
+  <img src={logoRDF} alt="RDF Importadora" className={className ?? 'h-10 w-auto'} />
 );
 
 const Header = () => {
@@ -51,7 +47,7 @@ const Header = () => {
             {navLinks.map((link) => (
               <a key={link.label} href={link.href} className="flex flex-col items-center gap-1 px-4 py-2 rounded-lg group hover:bg-primary/10 transition-colors">
                 <link.Icon className="h-5 w-5 text-primary opacity-70 group-hover:opacity-100 transition-opacity" />
-                <span className="text-xs text-muted-foreground group-hover:text-primary transition-colors font-medium">{link.label}</span>
+                <span className="text-xs font-medium text-muted-foreground group-hover:text-primary transition-colors">{link.label}</span>
               </a>
             ))}
           </nav>

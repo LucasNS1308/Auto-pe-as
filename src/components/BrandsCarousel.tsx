@@ -41,7 +41,7 @@ const BrandsCarousel = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-6xl font-display mb-2">
-            Marcas e <span className="text-gradient-amber">Parceiros</span>
+            Marcas e <span className="text-gradient-rdf">Parceiros</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             Distribuidor autorizado das maiores marcas do setor automotivo

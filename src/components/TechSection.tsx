@@ -5,17 +5,17 @@ const features = [
   {
     icon: MapPin,
     title: 'Entrega para Todo o Brasil',
-    text: 'Rastreamento em tempo real do seu pedido, do estoque até a porta da sua oficina.',
+    text: 'Rastreamento em tempo real do pedido, do estoque até a porta da sua oficina.',
   },
   {
     icon: BarChart3,
-    title: 'Gestão de Estoque',
-    text: 'Consultoria para ajudar sua oficina a manter o estoque ideal sem desperdício de capital.',
+    title: 'Compra por Atacado',
+    text: 'Tabelas progressivas de desconto para distribuidores, revendas e frotas.',
   },
   {
     icon: ShieldCheck,
-    title: 'Peças Certificadas',
-    text: 'Só trabalhamos com fornecedores homologados. Qualidade e procedência garantidas em cada item.',
+    title: 'Peças Importadas Certificadas',
+    text: 'Fornecedores homologados internacionalmente. Qualidade e procedência em cada item.',
   },
 ];
 
@@ -32,7 +32,7 @@ const TechSection = () => {
           <h2 className="text-4xl md:text-6xl font-display mb-4">
             Muito além de uma venda.
             <br />
-            <span className="text-gradient-amber">Uma parceria de confiança.</span>
+            <span className="text-gradient-rdf">Uma parceria de confiança.</span>
           </h2>
         </motion.div>
 

@@ -3,19 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const WHATSAPP_CONTACTS = [
   {
-    label: 'Matriz — São Paulo',
+    label: 'RDF Importadora',
     phone: '(11) 3000-0001',
     href: 'https://wa.me/5511930000001',
-  },
-  {
-    label: 'Filial — Belo Horizonte',
-    phone: '(31) 3000-0002',
-    href: 'https://wa.me/5531930000002',
-  },
-  {
-    label: 'Filial — Curitiba',
-    phone: '(41) 3000-0003',
-    href: 'https://wa.me/5541930000003',
   },
 ];
 
@@ -46,7 +36,7 @@ const CTAButton = () => {
     <div ref={containerRef} className="relative inline-block">
       <button
         onClick={() => setMenuOpen((prev) => !prev)}
-        className="bg-primary border-2 border-orange-400 text-black font-bold text-base px-8 py-4 rounded-full shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105 transition-all duration-200"
+        className="bg-accent border-2 border-accent/70 text-white font-bold text-base px-8 py-4 rounded-full shadow-lg shadow-accent/30 hover:shadow-accent/50 hover:scale-105 transition-all duration-200"
       >
         Fale com um especialista
       </button>
@@ -97,7 +87,7 @@ const CTAButton = () => {
               onClick={(e) => e.stopPropagation()}
             >
               <p className="px-3 pt-2 pb-1 text-xs font-medium text-muted-foreground uppercase tracking-wide">
-                Escolha uma unidade
+                Fale conosco
               </p>
               {WHATSAPP_CONTACTS.map((contact) => (
                 <a key={contact.href} href={contact.href} target="_blank" rel="noopener noreferrer" onClick={closeMenu} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-muted/50 transition-colors">
